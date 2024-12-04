@@ -6,8 +6,8 @@ const pause=document.getElementById('pbtn');
 const end=document.getElementById('stopbtn');
 const mode=document.getElementById('anorfn');
 let i=0;
-let j=1;
-let k=1;
+let j=0;
+let k=0;
 let cnt=0;
 let isStarted=false;
 let tid;
@@ -54,9 +54,9 @@ function displayHrs(){
   if(k===13){
     k=1;
     cnt++;
-    // if(cnt%2!==0){
-    //   mode.innerHTML="PM"
-    // }
+    if(cnt%2!==0){
+      mode.innerHTML="PM"
+    }
   }
   hr.innerHTML=k<10?'0'+k:k;
   k++;
